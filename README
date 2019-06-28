@@ -1,0 +1,12 @@
+==== Lithium ====
+Lithium is a Discord bot framework for Java. It is currently at a very early stage of development, so it is neither fully documented nor very flexible, though it does feature some quite powerful APIs. Use of it at this stage is not recommended as a ton of breaking changes will occur in the following updates.
+
+Building=========
+Lithium uses Maven as its build tool of preference. You can easily build and install it with
+
+	mvn clean install
+	
+This will install Lithium into your local Maven repository.
+
+Examples=========
+Lithium does currently feature no examples, though I have made a bot that is built on top of it. You can get it at https://github.com/markozajc/LRPG. It's not the best example ever, but it does make use of some of the before mentioned APIs and it is a complete bot, meaning it can be compiled and ran easily.
