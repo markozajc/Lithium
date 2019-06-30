@@ -4,7 +4,7 @@
 	<modelVersion>4.0.0</modelVersion>
 	<groupId>com.github.markozajc</groupId>
 	<artifactId>lithium</artifactId>
-	<version>0.1</version>
+	<version>0.1.1</version>
 
 	<name>Lithium</name>
 	<description>A JDA bot framework</description>
