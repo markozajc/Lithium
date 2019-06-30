@@ -42,7 +42,8 @@ public class FilePropertyManager extends PropertyManager {
 	public Future<Void> setProperty(String key, String value) {
 		return this.executor.submit(() -> {
 			Files.write(new File(this.propertiesDirectory, key + "." + EXTENSION).toPath(),
-				value.getBytes(StandardCharsets.UTF_8), StandardOpenOption.WRITE, StandardOpenOption.CREATE);
+				value.getBytes(StandardCharsets.UTF_8), StandardOpenOption.WRITE, StandardOpenOption.TRUNCATE_EXISTING,
+				StandardOpenOption.CREATE);
 			return null;
 		});
 	}
