@@ -31,7 +31,7 @@ public class Task {
 	 * Creates a new {@link Task}.
 	 *
 	 * @param action
-	 *            The {@link TaskAction} to take place.
+	 *            The {@link TaskAction} to run.
 	 * @param name
 	 *            The name of this task.
 	 */
@@ -43,7 +43,7 @@ public class Task {
 	 * Creates a new {@link Task} with children {@link Task}s.
 	 *
 	 * @param action
-	 *            The {@link TaskAction} to take place.<gf
+	 *            The {@link TaskAction} to run.
 	 * @param name
 	 *            The name of this task.
 	 * @param children

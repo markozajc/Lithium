@@ -42,7 +42,7 @@ public abstract class Provider<T> {
 	}
 
 	/**
-	 * @return the data key that will be used when loading & storing values
+	 * @return the data key that will be used when loading and storing values
 	 */
 	public abstract String getDataKey();
 
