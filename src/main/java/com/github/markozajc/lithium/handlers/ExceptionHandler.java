@@ -410,6 +410,9 @@ public class ExceptionHandler {
 		return true;
 	}
 
+	@SuppressFBWarnings("RV_RETURN_VALUE_IGNORED_BAD_PRACTICE") // All queues have a predetermined length that will
+																// never be exceeded (thus #offer will never return
+																// false and can be safely ignored)
 	private static void reportThrowable(ProcessContext context, Throwable t, String errorCode) {
 		LOG.debug("Reporting a throwable to bot's owner.");
 
