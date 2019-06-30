@@ -39,7 +39,7 @@ public abstract class Command {
 
 	}
 
-	public abstract void execute(CommandContext context, Parameters params) throws Throwable; // NOSONAR
+	public abstract void execute(@Nonnull CommandContext context, Parameters params) throws Throwable; // NOSONAR
 
 	@Nullable
 	public String getAdditionalData() {
