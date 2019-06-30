@@ -37,7 +37,6 @@ public class Dialogs {
 				default:
 					foundChannel = null;
 					break;
-
 			}
 
 			if (foundChannel == null)
@@ -52,6 +51,10 @@ public class Dialogs {
 				if (!((TextChannel) foundChannel).canTalk(((TextChannel) foundChannel).getGuild().getMember(foundUser)))
 					return true;
 				// User can't talk anymore
+
+				if(!((TextChannel) foundChannel).canTalk())
+					return true;
+				// Bot can't talk anymore
 			}
 
 			return false;
