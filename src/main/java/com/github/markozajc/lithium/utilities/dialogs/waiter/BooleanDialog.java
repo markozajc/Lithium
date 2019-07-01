@@ -28,24 +28,23 @@ public class BooleanDialog extends EventWaiterDialog<GenericMessageReactionEvent
 	}
 
 	public BooleanDialog(ProcessContext context, MessageDialog messageDialog, long userId, Consumer<Boolean> action) {
-		super(context, GenericMessageReactionEvent.class, messageDialog,
-				event -> action
-						.accept(event.getReaction().getReactionEmote().getName().equals(Constants.ACCEPT_EMOJI)));
+		super(context, GenericMessageReactionEvent.class, messageDialog, event -> action
+				.accept(event.getReaction().getReactionEmote().getName().equals(Constants.ACCEPT_EMOJI)));
 		this.userId = userId;
 	}
 
 	@Override
 	public CompletionStage<Message> display(MessageChannel channel) {
-		Predicate<GenericMessageReactionEvent> isRight = event -> event.getUser().getIdLong() == this.userId
-				&& event.getChannel().getIdLong() == channel.getIdLong()
-				&& (event.getReaction().getReactionEmote().getName().equals(Constants.ACCEPT_EMOJI)
-						|| event.getReaction().getReactionEmote().getName().equals(Constants.DENY_EMOJI));
 
 		return this.getMessageDialog().display(channel).whenCompleteAsync((m, t) -> {
 			if (m != null) {
 				m.addReaction(Constants.ACCEPT_EMOJI).queue();
 				m.addReaction(Constants.DENY_EMOJI).queue();
 
+				Predicate<GenericMessageReactionEvent> isRight = event -> event.getUser().getIdLong() == this.userId
+						&& event.getMessageIdLong() == m.getIdLong()
+						&& (event.getReaction().getReactionEmote().getName().equals(Constants.ACCEPT_EMOJI)
+								|| event.getReaction().getReactionEmote().getName().equals(Constants.DENY_EMOJI));
 				Predicate<Void> canCleanup = Dialogs.getDefaultCleanupPredicate(channel, this.userId)
 						.and(v -> m.getTextChannel().getMessageById(m.getId()) != null);
 
