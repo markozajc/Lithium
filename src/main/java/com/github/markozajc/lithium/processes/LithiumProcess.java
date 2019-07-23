@@ -11,6 +11,8 @@ import com.github.markozajc.lithium.processes.context.ProcessContext;
  * which can be used to determine various things
  *
  * @author Marko Zajc
+ * @param <T>
+ *            The return type of this process.
  */
 public abstract class LithiumProcess<T> implements Callable<T> {
 

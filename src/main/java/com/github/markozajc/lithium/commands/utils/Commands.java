@@ -17,9 +17,11 @@ public class Commands {
 	 * {@code*command <param1> <param2>}<br>
 	 * where {@code *} is the prefix, {@code command} is the command name and
 	 * {@code param1} and {@code param2} are the parameters
-	 * 
+	 *
 	 * @param command
+	 *            The {@link Command} to build usage information for.
 	 * @param prefix
+	 *            The prefix to prepend the usage information with.
 	 * @return usage for that command
 	 */
 	@SuppressWarnings("null")
@@ -38,7 +40,7 @@ public class Commands {
 
 	/**
 	 * Generates Parameters for a command from a raw message.
-	 * 
+	 *
 	 * @param command
 	 *            command to generate parameters for
 	 * @param event

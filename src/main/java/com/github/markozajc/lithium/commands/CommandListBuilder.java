@@ -19,6 +19,7 @@ public class CommandListBuilder {
 	 * Registers a command.
 	 *
 	 * @param command
+	 *            The {@link Command} to register.
 	 * @return self, used for chaining
 	 */
 	public CommandListBuilder registerCommand(Command command) {
@@ -30,6 +31,7 @@ public class CommandListBuilder {
 	 * Registers a list of commands.
 	 *
 	 * @param commands
+	 *            A {@link Collection} of {@link Command}s to register.
 	 * @return self, used for chaining
 	 */
 	public CommandListBuilder registerCommands(Collection<Command> commands) {
@@ -41,6 +43,7 @@ public class CommandListBuilder {
 	 * Unregisters a command.
 	 *
 	 * @param command
+	 *            The {@link Command} to unregister.
 	 * @return self, used for chaining
 	 * @see CommandListBuilder#unregisterCommands(Collection)
 	 */
@@ -53,6 +56,7 @@ public class CommandListBuilder {
 	 * Unregisters a collection of commands.
 	 *
 	 * @param commands
+	 *            A {@link Collection} of {@link Command}s to unregister.
 	 * @return self, used for chaining
 	 * @see CommandListBuilder#unregisterCommand(Command)
 	 */

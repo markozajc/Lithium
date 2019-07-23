@@ -41,6 +41,7 @@ public class CommandHandler {
 		 *            The {@link CommandContext} with the {@link Command} in question.
 		 * @return Whether the {@link Command} is eligible for launch
 		 * @throws Throwable
+		 *             in case an error occurs
 		 */
 		public default boolean canExecuteCommand(CommandContext context) throws Throwable { // NOSONAR
 			return true;
@@ -52,6 +53,7 @@ public class CommandHandler {
 		 * @param context
 		 *            The {@link CommandContext} with the {@link Command} in question.
 		 * @throws Throwable
+		 *             in case an error occurs
 		 */
 		public default void onCommandFinished(CommandContext context) throws Throwable {} // NOSONAR
 

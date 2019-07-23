@@ -48,6 +48,7 @@ public class MessageLock<M> {
 	 * Sends the message.
 	 *
 	 * @param message
+	 *            The message to send to the receiver.
 	 */
 	public void send(M message) {
 		this.message = message;
@@ -62,10 +63,11 @@ public class MessageLock<M> {
 	 * Throws a new exception, that is wrapped into a {@link SenderException} and passed
 	 * onto the {@link #receive()} part.
 	 *
-	 * @param e
+	 * @param exception
+	 *            The {@link Exception} to throw to the receiver.
 	 */
-	public void throwException(Exception e) {
-		this.exception = e;
+	public void throwException(Exception exception) {
+		this.exception = exception;
 
 		synchronized (this.lock) {
 			this.lock.notifyAll();

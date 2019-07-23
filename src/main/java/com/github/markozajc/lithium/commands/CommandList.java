@@ -60,9 +60,12 @@ public class CommandList implements Iterable<Command> {
 	}
 
 	/**
+	 * Retrieves a command by its ID.
+	 *
 	 * @param id
-	 * @return the command with given id, if found, null if a command with such ID wasn't
-	 *         found
+	 *            The ID of the command to retrieve.
+	 * @return The command with given ID, if found, {@code null} if a command with such
+	 *         ID wasn't found.
 	 */
 	@Nullable
 	public Command getById(int id) {
@@ -72,7 +75,7 @@ public class CommandList implements Iterable<Command> {
 	/**
 	 * Retrieves list of all registered commands
 	 *
-	 * @return An unmodifiable containg all registered commands
+	 * @return An unmodifiable containing all registered commands
 	 */
 	public List<Command> getRegisteredCommands() {
 		return Collections.unmodifiableList(this.commands);

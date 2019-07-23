@@ -53,6 +53,8 @@ public class CommandException extends RuntimeException {
 	 * won't do anything.
 	 *
 	 * @param channel
+	 *            the {@link MessageChannel} to send this {@link CommandException}'s
+	 *            message to
 	 */
 	public void sendMessage(MessageChannel channel) {
 		if (this.msg != null)

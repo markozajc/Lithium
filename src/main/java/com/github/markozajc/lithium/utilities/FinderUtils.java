@@ -48,7 +48,9 @@ public class FinderUtils {
 	 * mention.
 	 *
 	 * @param query
+	 *            The search query.
 	 * @param guild
+	 *            The {@link Guild} to search.
 	 * @return list of found members, sorted by similarity to the query, with direct
 	 *         mentions first (can be empty)
 	 */
@@ -67,7 +69,9 @@ public class FinderUtils {
 	 * mention.
 	 *
 	 * @param query
+	 *            The search query.
 	 * @param guild
+	 *            The {@link Guild} to search.
 	 * @return list of found roles, sorted by similarity to the query, with direct
 	 *         mentions first (can be empty)
 	 */

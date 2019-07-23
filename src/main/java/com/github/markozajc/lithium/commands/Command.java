@@ -25,8 +25,8 @@ public abstract class Command {
 	 * Checks if a member has sufficient permissions to execute a command. If they don't,
 	 * this will throw a {@link MemberInsufficientPermissionsException}.
 	 *
-	 * @param member
-	 * @throws MemberInsufficientPermissionsException
+	 * @param member the {@link Member} to check permissions for
+	 * @throws MemberInsufficientPermissionsException in case the {@link Member} does not have sufficient permissions
 	 */
 	public final void checkPermissions(Member member) {
 		Permission[] permissions = this.getPermissions();

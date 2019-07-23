@@ -167,6 +167,7 @@ public abstract class Provider<T> {
 	 * {@link #store(PropertyManager)}
 	 *
 	 * @param t
+	 *            The error.
 	 */
 	public void onStoreFail(Throwable t) {
 		LOG.error("Failed to store {}", this.getClass().getSimpleName());
@@ -178,6 +179,7 @@ public abstract class Provider<T> {
 	 * {@link #load(PropertyManager)}.
 	 *
 	 * @param t
+	 *            The error.
 	 */
 	public void onLoadFail(Throwable t) {
 		LOG.error("Failed to load {}", this.getClass().getSimpleName());
