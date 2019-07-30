@@ -6,7 +6,7 @@ import java.util.concurrent.TimeUnit;
 import com.github.markozajc.lithium.commands.exceptions.runtime.TimeoutException;
 
 /**
- * An implementation of CountDownLatch able to transport values
+ * A lock that blocks and receives a message.
  *
  * @author Marko Zajc
  *
